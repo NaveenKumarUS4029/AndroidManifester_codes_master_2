@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/websitee"
+        android:icon="@drawable/ic_baseline_web_24"
+        android:title="website"
+        android:onClick="website"
+        android:contentDescription="content_description_favorite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/googleimg"
+        android:icon="@drawable/ic_baseline_image_24"
+        android:title="google image"
+        android:onClick="goog_img"
+        android:contentDescription="content_description_favorite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/shares"
+        android:onClick="share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="share"
+        android:contentDescription="content_description_search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/quit"
+        android:onClick="quit"
+        android:title="Quit"
+        android:contentDescription="content_description_more"
+        app:showAsAction="never" />
+
+</menu>

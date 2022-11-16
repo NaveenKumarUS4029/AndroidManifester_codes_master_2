@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_light_default"
+    tools:context="kp.ranjith.GetStarted">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/bevan"
+                android:gravity="center"
+                android:letterSpacing=".05"
+                android:text="Android          \n    Manifester"
+                android:textColor="#B2FF59"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/sen1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chewy"
+            android:gravity="center"
+            android:letterSpacing=".05"
+            android:text="Where There is A Will ,There is A Way ."
+            android:textColor="#FFE0B2"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/chewy"
+            android:letterSpacing="0.15"
+            android:text="Hello \n World"
+            android:textColor="#FFF176"
+            android:textSize="70sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startbtn"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/round"
+            android:drawableRight="@drawable/ic_baseline_double_arrow_24"
+            android:paddingLeft="20dp"
+            android:text="Get started"
+            android:textAllCaps="false"
+            android:textColor="#B2FF59"
+            android:textSize="25dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ImageView
+                android:id="@+id/img_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="fb_ranjith"
+                app:srcCompat="@drawable/facebook32" />
+
+            <ImageView
+                android:id="@+id/img_insta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="insta_ranjith"
+                app:srcCompat="@drawable/insta32" />
+
+            <ImageView
+                android:id="@+id/img_whatsapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="whatsapp_ranjith"
+                app:srcCompat="@drawable/whatsapp32" />
+
+            <ImageView
+                android:id="@+id/img_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="twitter_ranjith"
+                app:srcCompat="@drawable/twitter32" />
+
+            <ImageView
+                android:id="@+id/img_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="youtube_ranjith"
+                app:srcCompat="@drawable/youtube32" />
+
+            <ImageView
+                android:id="@+id/img_github"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="github_ranjith"
+                app:srcCompat="@drawable/github32"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
