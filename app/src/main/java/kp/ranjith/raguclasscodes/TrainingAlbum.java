@@ -3,7 +3,11 @@ package kp.ranjith.raguclasscodes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -11,18 +15,23 @@ import android.webkit.WebViewClient;
 public class TrainingAlbum extends AppCompatActivity {
 
     WebView trainingAlbm;
+    String TAG = "acccc";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_training_album);
+      /*Intent intent = new Intent("android.intent.action.MAIN");
+        intent.setComponent(ComponentName.unflattenFromString("com.google.android.apps.photos"));
+        intent.addCategory("android.intent.category.LAUNCHER");
+        intent.setPackage("com.google.android.apps.photos");
+        startActivity(intent);*/
 
         trainingAlbm = findViewById(R.id.train_albm_web);
-
         trainingAlbm.setWebViewClient(new WebViewClient());
         trainingAlbm.loadUrl("https://photos.google.com/share/AF1QipOEWqyo79ngdnT8zjSdzL56elzDyVJU6JJXJ7oQs-ST1hRGvSx9gIHp2vTiPLdjNw?pli=1&key=QWwzSVhrOWdxV3QxdmZYVy1sRUYxek94UnlCWnlB");
         trainingAlbm.setWebChromeClient(new WebChromeClient() {
             private ProgressDialog mProgress;
-
             @Override
             public void onProgressChanged(WebView view, int progress) {
                 if (mProgress == null) {
@@ -36,5 +45,6 @@ public class TrainingAlbum extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

@@ -20,6 +20,7 @@ public class GithubWeb extends AppCompatActivity {
         gitWebview = findViewById(R.id.gitweb);
 
         gitWebview.setWebViewClient(new WebViewClient());
+
         gitWebview.loadUrl("https://github.com/ranjithstar256");
 
         gitWebview.setWebChromeClient(new WebChromeClient() {

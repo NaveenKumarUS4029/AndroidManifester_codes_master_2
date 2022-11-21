@@ -3,6 +3,10 @@ package kp.ranjith.raguclasscodes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -12,14 +16,28 @@ import android.webkit.WebViewClient;
 public class FaceBk extends AppCompatActivity {
 
     WebView fb;
+    public void getOpenFacebookIntent(Context context) {
+
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/androidmanifester")));
+
+        try {
+           // Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://profile/426253597411111"));
+            //startActivity(intent);
+        } catch (Exception e) {
+///            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/androidmanifester")));
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_bk);
 
-        fb=findViewById(R.id.fbweb);
-        fb.setWebViewClient(new WebViewClient());
-        fb.loadUrl("https://www.facebook.com/androidmanifester/");
+        getOpenFacebookIntent(this);
+
+
+      /*  fb=findViewById(R.id.fbweb);
+
+        fb.loadUrl("https://www.facebook.com/androidmanifester");
 
         fb.setWebChromeClient(new WebChromeClient() {
             private ProgressDialog mProgress;
@@ -36,7 +54,7 @@ public class FaceBk extends AppCompatActivity {
                     mProgress = null;
                 }
             }
-        });
+        });*/
 
     }
 }

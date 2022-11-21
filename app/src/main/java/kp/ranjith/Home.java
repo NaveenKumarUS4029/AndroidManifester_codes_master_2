@@ -2,6 +2,7 @@ package kp.ranjith;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,15 +51,15 @@ public class Home extends AppCompatActivity {
         github = findViewById(R.id.github);
 
 
-        topicsAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        sylabusAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        aboutAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        learnAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        interviewQuesAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        contactAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        reviewsAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        trainingAlbmAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
-        githubAni = AnimationUtils.loadAnimation(this,R.anim.fadebtn);
+        topicsAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        sylabusAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        aboutAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        learnAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        interviewQuesAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        contactAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        reviewsAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        trainingAlbmAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
+        githubAni = AnimationUtils.loadAnimation(this, R.anim.fadebtn);
 
         topics.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +106,6 @@ public class Home extends AppCompatActivity {
         });
 
 
-
         interviewQues.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,7 +118,10 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 contact.startAnimation(contactAni);
-                startActivity(new Intent(getApplicationContext(), GooglMaps.class));
+                ///   startActivity(new Intent(getApplicationContext(), GooglMaps.class));
+                String uri = "https://maps.app.goo.gl/ztKMhdEWzjAN5MTGA";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                startActivity(intent);
             }
         });
 
@@ -137,7 +140,6 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), GithubWeb.class));
             }
         });
-
     }
 
 

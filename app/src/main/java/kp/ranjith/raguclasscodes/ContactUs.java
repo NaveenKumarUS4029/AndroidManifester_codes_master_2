@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import java.util.Locale;
+
 public class ContactUs extends AppCompatActivity {
 
     ImageView gmap, fb, urbanpro, whatsap,insta;
@@ -40,7 +42,17 @@ public class ContactUs extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gmap.startAnimation(gmapAni);
-                startActivity(new Intent(getApplicationContext(), GooglMaps.class));
+                ///startActivity(new Intent(getApplicationContext(), GooglMaps.class));
+
+                //X6R9+98 Chennai, Tamil Nadu
+             //   Uri uri = Uri.parse("geo:13.070984,80.253639");
+              //  Intent in = new Intent(Intent.ACTION_VIEW, uri);
+              //  startActivity(in);
+                //String uri = "https://g.page/androidmanifester?share";
+                String uri = "https://maps.app.goo.gl/ztKMhdEWzjAN5MTGA";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                startActivity(intent);
+
             }
         });
         fb.setOnClickListener(new View.OnClickListener() {
